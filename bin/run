@@ -1,0 +1,56 @@
+#!/usr/bin/env node
+var path = require('path')
+var fs = require('fs')
+
+const configFilePath = path.join(__dirname, '../config.json')
+
+if (fs.existsSync(configFilePath)) {
+  require('@oclif/command')
+  .run()
+  .then(require('@oclif/command/flush'))
+  .catch(require('@oclif/errors/handle'))
+} else {
+  var inquirer = require('inquirer')
+  inquirer
+  .prompt([
+    {
+      type: 'input',
+      name: 'repo1Alias',
+      message: 'First repository alias',
+      validate: function (_) {
+        return true
+      },
+      default: 'server',
+    },
+    {
+      type: 'input',
+      name: 'repo1Path',
+      message: 'First repository path',
+      validate: function (_) {
+        return true
+      },
+      default: '~/projects/repo1',
+    },
+    {
+      type: 'input',
+      name: 'repo2Alias',
+      message: 'Second repository alias',
+      validate: function (_) {
+        return true
+      },
+      default: 'client',
+    },
+    {
+      type: 'input',
+      name: 'repo2Path',
+      message: 'Second repository path',
+      validate: function (_) {
+        return true
+      },
+      default: '~/projects/repo2',
+    },
+  ])
+  .then(answers => {
+    fs.writeFileSync(configFilePath, JSON.stringify(answers, null, 2), 'utf-8')
+  })
+}

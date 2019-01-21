@@ -1,0 +1,6 @@
+{
+  "repo1Alias": "server",
+  "repo1Path": "~/projects/workable",
+  "repo2Alias": "client",
+  "repo2Path": "~/projects/ui"
+}

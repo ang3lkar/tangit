@@ -1,0 +1,74 @@
+{
+  "name": "tangit",
+  "description": "Branch management when working with two repositories",
+  "version": "1.0.4",
+  "author": "Angelos Karagkiozidis @ange3lkar",
+  "bin": {
+    "tangit": "./bin/run"
+  },
+  "bugs": "https://github.com/ang3lkar/tangit/issues",
+  "dependencies": {
+    "@babel/code-frame": "7.0.0",
+    "@oclif/command": "^1",
+    "@oclif/config": "1.12.4",
+    "@oclif/plugin-help": "2.1.6",
+    "bluebird": "3.5.3",
+    "chalk": "2.4.2",
+    "cli-ux": "5.0.0",
+    "foreground-child": "1.5.6",
+    "handlebars": "4.1.0",
+    "inquirer": "6.2.2",
+    "istanbul-lib-source-maps": "3.0.2",
+    "istanbul-reports": "2.1.0",
+    "node-cmd": "3.0.0",
+    "node-pre-gyp": "0.12.0",
+    "os-locale": "3.1.0",
+    "spawn-wrap": "1.4.2",
+    "tar": "4.4.8"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "^1",
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "chai": "^4",
+    "eslint": "5.13.0",
+    "eslint-config-oclif": "^3.1",
+    "globby": "^8",
+    "mocha": "^5",
+    "nyc": "13.2.0",
+    "shelljs": "0.8.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/ang3lkar/tangit",
+  "keywords": [
+    "oclif",
+    "git",
+    "cli"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "tangit",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "ang3lkar/tangit",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "NODE_ENV=test nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
