@@ -14,11 +14,14 @@ Runs the same git command in two repositories. Useful when working for example w
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+# Installation
+```sh-session
+$ npm install tangit
+```
 
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g tangit
 $ tangit COMMAND
 running command...
 $ tangit (-v|--version|version)
