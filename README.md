@@ -11,17 +11,20 @@ Runs the same git command in two repositories. Useful when working for example w
 ![Alt Text](preview.gif)
 
 <!-- toc -->
+* [Installation](#installation)
 * [Usage](#usage)
 * [Commands](#commands)
+
 <!-- tocstop -->
 # Installation
 ```sh-session
-$ npm install tangit
+$ npm install -g tangit
 ```
 
 # Usage
 <!-- usage -->
 ```sh-session
+$ npm install -g tangit
 $ tangit COMMAND
 running command...
 $ tangit (-v|--version|version)
