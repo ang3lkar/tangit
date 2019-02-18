@@ -1,7 +1,7 @@
 {
   "name": "tangit",
   "description": "Branch management when working with two repositories",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Angelos Karagkiozidis @ange3lkar",
   "bin": {
     "tangit": "./bin/run"

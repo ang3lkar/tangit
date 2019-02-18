@@ -28,7 +28,7 @@ $ npm install -g tangit
 $ tangit COMMAND
 running command...
 $ tangit (-v|--version|version)
-tangit/1.0.6 darwin-x64 node-v11.6.0
+tangit/1.0.7 darwin-x64 node-v11.6.0
 $ tangit --help [COMMAND]
 USAGE
   $ tangit COMMAND
@@ -54,7 +54,7 @@ OPTIONS
   -b, --branch=branch  Which branch to checkout. If branch does not exist, it will fallback to "master".
 ```
 
-_See code: [src/commands/checkout.js](https://github.com/ang3lkar/tangit/blob/v1.0.6/src/commands/checkout.js)_
+_See code: [src/commands/checkout.js](https://github.com/ang3lkar/tangit/blob/v1.0.7/src/commands/checkout.js)_
 
 ## `tangit help [COMMAND]`
 
@@ -80,7 +80,7 @@ USAGE
   $ tangit pull
 ```
 
-_See code: [src/commands/pull.js](https://github.com/ang3lkar/tangit/blob/v1.0.6/src/commands/pull.js)_
+_See code: [src/commands/pull.js](https://github.com/ang3lkar/tangit/blob/v1.0.7/src/commands/pull.js)_
 
 ## `tangit status`
 
@@ -91,7 +91,7 @@ USAGE
   $ tangit status
 ```
 
-_See code: [src/commands/status.js](https://github.com/ang3lkar/tangit/blob/v1.0.6/src/commands/status.js)_
+_See code: [src/commands/status.js](https://github.com/ang3lkar/tangit/blob/v1.0.7/src/commands/status.js)_
 <!-- commandsstop -->
 
 ## Contributing
